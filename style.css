@@ -78,9 +78,7 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 32px; 
-    /* position: absolute; */
-    /* top: 166px; */
-    /* right: 140px; */
+    margin-left: auto;
     border-radius: 16px; 
     background: var(--Pure-White, #FFF);
     box-shadow: 16px 32px 56px 0px rgba(143, 174, 207, 0.25);
@@ -142,14 +140,14 @@
     line-height: 150%;
   }
   .frame-64{
-    display: none;
+    display: flex;
     align-items: flex-start;
     gap: 24px;
     align-self: stretch;
   }
 
   .frame-64-imperial{
-    display: flex;
+    display: none;
     align-items: flex-start;
     gap: 24px;
     align-self: stretch;
@@ -503,4 +501,170 @@ input::-webkit-inner-spin-button {
   margin: 32px 0px;
   justify-content: center;
   padding: 0px 199px;
+ }
+
+
+/* tablet */
+ @media only screen and (max-width: 768px) {
+  /* .f-frames {
+    flex-direction: column;
+  } */
+  .container{
+    display: flex;
+    flex-direction: column;
+    width: 768px;
+  }
+  .rectangle-6{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 24px;
+    margin-right: 24px;
+    height: 640px;
+    width: auto;
+    flex-shrink: 0;
+    border-radius: 0px 0px 35px 35px;
+    background: var(--Gradient-1, linear-gradient(290deg, #D6E6FE 0%, rgba(214, 252, 254, 0.00) 100%));
+  }
+
+  .frame-58{
+    align-items: center;
+    width: auto;
+    text-align: center;
+    margin: 0px;
+  }
+
+  .better-understand{
+    width: auto;
+  }
+
+  .body-mass{
+    font-size: 48px;
+    letter-spacing: -2.4px;
+  }
+
+  .game-icons{
+    margin: 32px 0px 40px 0px;
+  }
+  .line-left{
+    display: none;
+  }
+
+  .f-frames{
+    /* display: none; */
+    position: unset;
+    display: flex;
+    gap: 32px;
+    margin-top: -250px;
+    justify-content: center;
+  }
+
+  .frame-6{
+    margin-left: 0px;
+  }
+
+  .bmi-result {
+    display: flex;
+    gap: 75px;
+    margin: 99px 60px 96px -50px;
+  }
+  .bmi-result-txt h1 {
+    font-size: 32px;
+  }
+
+  .suggested-solution{
+    flex-direction: column;
+    gap: 40px;
+    margin: 96px 0px 120px 0px;
+    border-radius: 0px;
+    padding-left: 40px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .part1, .part2, .part3{
+    z-index: -1;
+    display: flex;
+    flex-direction: row;
+    margin-left: 0px;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .part1 img,.part2 img, .part3 img {
+    margin: 0px;
+  }
+
+  .footer-tab-container{
+    display: grid;
+    padding: 24px;
+    grid-gap: 24px;
+    grid-template-areas: 'header header' 'cards1 cards2' 'cards3 cards4' 'lcards lcards';
+  }
+
+  .footer-tab-container div{
+    display: flex;
+    padding: 32px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0px;
+    flex: 1 0 0;
+    align-self: stretch;
+  }
+  .footer-tab-container h2{
+    margin-top: 0px;
+  }
+
+   .footer-container {
+    display: none;
+    /* flex-direction: column;
+    margin: 0px 40px; */
+}
+    .item1{
+      grid-area: header;
+    }
+    .item2{
+      grid-area: cards1;
+      border-radius: 16px;
+      background: var(--Pure-White, #FFF);
+      box-shadow: 16px 32px 56px 0px rgba(143, 174, 207, 0.25);
+    }
+    .item3{
+      grid-area: cards2;
+      border-radius: 16px;
+      background: var(--Pure-White, #FFF);
+      box-shadow: 16px 32px 56px 0px rgba(143, 174, 207, 0.25);
+    }
+    .item4{
+      grid-area: cards3;
+      border-radius: 16px;
+      background: var(--Pure-White, #FFF);
+      box-shadow: 16px 32px 56px 0px rgba(143, 174, 207, 0.25);
+    }
+    .item5{
+      grid-area: cards4;
+      border-radius: 16px;
+      background: var(--Pure-White, #FFF);
+      box-shadow: 16px 32px 56px 0px rgba(143, 174, 207, 0.25);
+    }
+    .item6{
+      grid-area: lcards;
+      width: 365px;
+      border-radius: 16px;
+      background: var(--Pure-White, #FFF);
+      box-shadow: 16px 32px 56px 0px rgba(143, 174, 207, 0.25);
+    }
+/*
+  .row1 {
+    flex-direction: column;
+  }
+*/
+  .line-right {
+    display: none;
+  } 
+ }
+
+
+ /* mobile devices */
+ @media only screen and (max-width: 375px) {
+
  }
