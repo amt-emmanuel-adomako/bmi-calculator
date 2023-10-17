@@ -503,16 +503,18 @@ input::-webkit-inner-spin-button {
   padding: 0px 199px;
  }
 
-
+ .footer-tab-container{
+  display: none;
+ }
 /* tablet */
- @media only screen and (max-width: 768px) {
+ @media only screen and (max-width: 870px) {
   /* .f-frames {
     flex-direction: column;
   } */
   .container{
     display: flex;
     flex-direction: column;
-    width: 768px;
+    max-width: max-content;
   }
   .rectangle-6{
     display: flex;
@@ -598,10 +600,11 @@ input::-webkit-inner-spin-button {
     display: grid;
     padding: 24px;
     grid-gap: 24px;
+    margin: 0px;
     grid-template-areas: 'header header' 'cards1 cards2' 'cards3 cards4' 'lcards lcards';
   }
 
-  .footer-tab-container div{
+  .footer-tab-container>div{
     display: flex;
     padding: 32px;
     flex-direction: column;
@@ -616,8 +619,8 @@ input::-webkit-inner-spin-button {
 
    .footer-container {
     display: none;
-    /* flex-direction: column;
-    margin: 0px 40px; */
+    /* flex-direction: column;*/
+    margin: 0px; 
 }
     .item1{
       grid-area: header;
@@ -637,16 +640,20 @@ input::-webkit-inner-spin-button {
     .item4{
       grid-area: cards3;
       border-radius: 16px;
+      width:auto;
       background: var(--Pure-White, #FFF);
       box-shadow: 16px 32px 56px 0px rgba(143, 174, 207, 0.25);
     }
     .item5{
       grid-area: cards4;
+      width: auto;
       border-radius: 16px;
       background: var(--Pure-White, #FFF);
       box-shadow: 16px 32px 56px 0px rgba(143, 174, 207, 0.25);
     }
     .item6{
+      margin-left: auto;
+      margin-right: auto;
       grid-area: lcards;
       width: 365px;
       border-radius: 16px;
@@ -665,6 +672,50 @@ input::-webkit-inner-spin-button {
 
 
  /* mobile devices */
- @media only screen and (max-width: 375px) {
+ @media only screen and (max-width: 425px) {
+  .game-icons {
+    margin: 32px 0px 0px 0px;
+}
 
+.frame-58{
+  margin: 24px;
+  gap: 24px;
+}
+  .container{
+    /* width: 100%; */
+  }
+  .rectangle-6{
+    margin: 0px;
+  }
+
+  .f-frames{
+    margin: -124px 24px 0px 24px;
+  }
+
+  .bmi-result {
+    display: flex;
+    gap: 0px;
+    margin: 72px 0px 0px 0px;
+    flex-direction: column;
+  }
+
+  .bmi-result-txt {
+    margin: 24px;
+  }
+
+  .suggested-solution {
+    margin: 72px 0px 0px 0px;
+    padding-left: 0px;
+  }
+
+  .part1, .part2, .part3 {
+    flex-direction: column;
+    margin-left: 20px;
+    align-items: flex-start;
+    gap: 0px;
+  }
+  .footer-tab-container{
+    display: flex;
+    flex-direction: column;
+  }
  }
