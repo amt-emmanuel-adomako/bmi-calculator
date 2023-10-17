@@ -7,6 +7,7 @@ var imperialInput1;
 var imperialInput2;
 var imperialInput1In;
 var imperialInput2Lbs;
+var bmiRange;
 window.onload = function () {
     input1 = document.getElementById('height');
     input2 = document.getElementById('weight');
@@ -17,20 +18,26 @@ window.onload = function () {
     resultVal = document.getElementById('result');
     calcResult = document.getElementById("calc-res");
     unCalcResult = document.getElementById("un-calc-res");
+    bmiRange = document.getElementById("bmi-range");
     var metricRadio = document.getElementById("met-rad");
     var imperialRadio = document.getElementById("imp-rad");
     var metDiv = document.getElementById("frame-64");
     var impDiv = document.getElementById("frame-64-imp");
+    // console.log(bmiRange.value)
     metricRadio.addEventListener("change", function () {
         if (metricRadio.checked) {
             metDiv.style.display = 'flex';
             impDiv.style.display = 'none';
+            calcResult.style.display = 'none';
+            unCalcResult.style.display = 'flex';
         }
     });
     imperialRadio.addEventListener("change", function () {
         if (imperialRadio.checked) {
             metDiv.style.display = 'none';
             impDiv.style.display = 'flex';
+            calcResult.style.display = 'none';
+            unCalcResult.style.display = 'flex';
         }
     });
 };
@@ -41,6 +48,7 @@ function calculateMetric() {
         var res = (value2) / ((value1 / 100) * (value1 / 100));
         // resultVal.textContent = JSON.stringify(res)
         resultVal.textContent = res.toFixed(1);
+        bmiRange.textContent = '63.3kgs - 85.2kgs';
         console.log(resultVal.value);
         calcResult.style.display = 'flex';
         unCalcResult.style.display = 'none';
@@ -61,6 +69,7 @@ function calculateImperial() {
         // resultVal.textContent = JSON.stringify(res)
         // const res = value1+value2+value3+value4;
         resultVal.textContent = res.toFixed(1);
+        bmiRange.textContent = '9st 6lbs - 12st 10lbs';
         console.log(resultVal.value);
         calcResult.style.display = 'flex';
         unCalcResult.style.display = 'none';
