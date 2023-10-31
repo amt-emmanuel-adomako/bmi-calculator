@@ -718,4 +718,7 @@ input::-webkit-inner-spin-button {
     display: flex;
     flex-direction: column;
   }
+  .item6{
+    width: auto;
+  }
  }
